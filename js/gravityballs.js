@@ -4,8 +4,8 @@ const c = canvas.getContext('2d');
 
 canvas.width = innerWidth;
 canvas.height = innerHeight;
-
-
+const background = new Image();
+background.src = "images/misc/neuron_net.jpg";
 
 // Variables
 let mouse = {
@@ -152,8 +152,6 @@ function resetCanvas(color){
     c.fillStyle = color;
     c.fillRect(0, 0, canvas.width, canvas.height);
     c.restore();
-    var background = new Image();
-    background.src = "images/misc/neuron_net.jpg";
     c.drawImage(background,0,0,canvas.width,canvas.height);
     c.font = (canvas.width / 22) + "px Arial";
     c.fillStyle = "white"
